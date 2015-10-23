@@ -1,0 +1,12 @@
+{
+  "extends": "defaults/configurations/walmart/es6-node",
+  "env": {
+    "mocha": true
+  },
+  "rules": {
+    "quotes": [2, "single"]
+  },
+  "ecmaFeatures": {
+    "modules": true
+  }
+}

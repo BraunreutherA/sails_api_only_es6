@@ -1,0 +1,42 @@
+{
+  "name": "api_v1",
+  "private": true,
+  "version": "0.0.0",
+  "description": "a Sails application",
+  "keywords": [],
+  "dependencies": {
+    "rc": "~0.5.0",
+    "sails": "~0.11.2",
+    "sails-disk": "~0.10.0"
+  },
+  "scripts": {
+    "postinstall": "npm run docs -s",
+    "debug": "node debug app.js",
+    "start": "node app.js",
+    "develop": "echo '=> starting development mode.' && npm test",
+    "lint": "echo '=> linting files.' && eslint api/**",
+    "test:coverage": "echo '=> running code coverage.' && babel-node ./node_modules/.bin/isparta cover _mocha -R spec --require ./test/bootstrap.js --recursive ./test",
+    "test": "echo '=> starting unit tests.' && mocha --compilers js:babel/register -R spec --recursive ./test",
+    "pretest": "npm run lint -s",
+    "docs": "echo '=> creating documentation.' && ./node_modules/.bin/esdoc -c esdoc.json"
+  },
+  "main": "app.js",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/braunreu/api_v1.git"
+  },
+  "author": "braunreu",
+  "license": "",
+  "devDependencies": {
+    "babel": "^5.8.23",
+    "chai": "^3.4.0",
+    "esdoc": "^0.4.1",
+    "eslint": "^1.7.3",
+    "eslint-config-defaults": "^7.0.1",
+    "eslint-plugin-filenames": "^0.1.2",
+    "isparta": "^3.0.4",
+    "istanbul": "^0.3.20",
+    "mocha": "^2.3.3",
+    "sinon": "^1.17.2"
+  }
+}

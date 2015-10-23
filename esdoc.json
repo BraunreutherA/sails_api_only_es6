@@ -1,0 +1,10 @@
+{
+  "title": "Instantley api v1",
+  "source": "./api",
+  "destination": "./documentation",
+  "coverage": true,
+  "test": {
+    "type": "mocha",
+    "source": "./test"
+  }
+}
