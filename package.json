@@ -16,6 +16,8 @@
     "develop": "echo '=> starting development mode.' && npm test",
     "lint": "echo '=> linting files.' && eslint api/**",
     "test:coverage": "echo '=> running code coverage.' && babel-node ./node_modules/.bin/isparta cover ./node_modules/.bin/_mocha -R spec --recursive ./test",
+    "pretest:coverage": "npm run lint -s",
+    "posttest:coverage": "npm run docs -s",
     "test": "echo '=> starting unit tests.' && mocha --compilers js:babel/register -R spec --recursive ./test",
     "pretest": "npm run lint -s",
     "docs": "echo '=> creating documentation.' && ./node_modules/.bin/esdoc -c esdoc.json"
