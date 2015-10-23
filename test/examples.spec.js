@@ -6,7 +6,7 @@ let chai = require('chai'),
 chai.should();
 
 // Import the Rectangle class.
-let Rectangle = require(path.join(__dirname, '..', '..', 'api', 'models', 'rectangle'));
+let Rectangle = require(path.join(__dirname, '..', 'api', 'models', 'Rectangle'));
 
 // The fat arrow (=>) syntax is a new way to define
 // functions in ES6. One feature that is different
